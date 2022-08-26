@@ -54,6 +54,13 @@
             android:id="@+id/action_gameWonFragment_to_gameFragment"
             app:destination="@id/gameFragment"
             app:popUpTo="@id/titleFragment" />
+        <argument
+            android:name="numQuestion"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
+        <!--        represents the number of questions the user answered correctly.-->
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"

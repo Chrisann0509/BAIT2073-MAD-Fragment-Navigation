@@ -40,7 +40,7 @@ class TitleFragment : Fragment() {
 //        return inflater.inflate(R.layout.placeholder_layout, container, false)
 
         binding.playButton.setOnClickListener{view:View ->
-            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
+            view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
         }
         setHasOptionsMenu(true)  //allow option menu to the activity
         return binding.root

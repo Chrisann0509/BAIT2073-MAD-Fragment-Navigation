@@ -17,6 +17,7 @@
 package com.example.android.navigation
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -84,6 +85,7 @@ class GameFragment : Fragment() {
             // Do nothing if nothing is checked (id == -1)
             if (-1 != checkedId) {
                 var answerIndex = 0
+                Log.d("Checked ID",checkedId.toString())
                 when (checkedId) {
                     R.id.secondAnswerRadioButton -> answerIndex = 1
                     R.id.thirdAnswerRadioButton -> answerIndex = 2
@@ -91,6 +93,7 @@ class GameFragment : Fragment() {
                 }
                 // The first answer in the original question is always the correct one, so if our
                 // answer matches, we have the correct answer.
+                Log.d("aaa",answerIndex.toString())
                 if (answers[answerIndex] == currentQuestion.answers[0]) {
                     questionIndex++
                     // Advance to the next question
@@ -100,11 +103,11 @@ class GameFragment : Fragment() {
                         binding.invalidateAll()
                     } else {
                         // We've won!  Navigate to the gameWonFragment.
-                        view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
+                        view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(numQuestions,questionIndex))
                     }
                 } else {
                     // Game over! A wrong answer sends us to the gameOverFragment.
-                    view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment)
+                    view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
                 }
             }
         }
