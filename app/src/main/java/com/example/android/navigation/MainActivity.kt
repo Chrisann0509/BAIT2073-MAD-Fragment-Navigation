@@ -19,15 +19,35 @@ package com.example.android.navigation
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.android.navigation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var drawerLayout: DrawerLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         @Suppress("UNUSED_VARIABLE")
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        drawerLayout=binding.drawerLayout
+        //initialize drawerLayout
+        // drawerLayout is from activity_main.xml (Layout folder)
+        val navController=this.findNavController(R.id.myNavHostFragment)
+        //myNavHostFragment is a fragment in activity_main.xml (Layout folder)
+        //an empty container to display all the destination
+
+        NavigationUI.setupActionBarWithNavController(this,navController,drawerLayout) //add drawer action bar to main_activity
+        NavigationUI.setupWithNavController(binding.navView,navController) //add the drawer nav view to main_activity
+        //navView is from activity_main.xml that include menu [navdrawer_menu.xml] with code (app:menu="@menu/navdrawer_menu")
+
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        val navController=this.findNavController(R.id.myNavHostFragment)
+        return NavigationUI.navigateUp(navController,drawerLayout)
+    }
     // TODO (01) Create the new TitleFragment
     // Select File->New->Fragment->Fragment (Blank)
 

@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Hp/Documents/DEGREE/BAIT2073 MOBILE APPLICATIONS DEVELOPMENT/BAIT2073-MAD-Fragment-Navigation/app/src/main/res/layout/activity_main.xml" value="0.11005434782608696" />
+        <entry key="..\:/Users/Hp/Documents/DEGREE/BAIT2073 MOBILE APPLICATIONS DEVELOPMENT/BAIT2073-MAD-Fragment-Navigation/app/src/main/res/layout/fragment_about.xml" value="0.15307971014492755" />
+        <entry key="..\:/Users/Hp/Documents/DEGREE/BAIT2073 MOBILE APPLICATIONS DEVELOPMENT/BAIT2073-MAD-Fragment-Navigation/app/src/main/res/layout/fragment_rules.xml" value="0.15307971014492755" />
+        <entry key="..\:/Users/Hp/Documents/DEGREE/BAIT2073 MOBILE APPLICATIONS DEVELOPMENT/BAIT2073-MAD-Fragment-Navigation/app/src/main/res/layout/fragment_title.xml" value="0.11005434782608696" />
+        <entry key="..\:/Users/Hp/Documents/DEGREE/BAIT2073 MOBILE APPLICATIONS DEVELOPMENT/BAIT2073-MAD-Fragment-Navigation/app/src/main/res/menu/navdrawer_menu.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/Hp/Documents/DEGREE/BAIT2073 MOBILE APPLICATIONS DEVELOPMENT/BAIT2073-MAD-Fragment-Navigation/app/src/main/res/menu/options_menu.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/TARUC/AndroidStudioProjects/AndroidTrivia-Starter/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/TARUC/AndroidStudioProjects/AndroidTrivia-Starter/app/src/main/res/layout/fragment_about.xml" value="0.358695652173913" />
         <entry key="..\:/Users/TARUC/AndroidStudioProjects/AndroidTrivia-Starter/app/src/main/res/layout/fragment_game_over.xml" value="0.358695652173913" />

@@ -1,12 +1,11 @@
 package com.example.android.navigation
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.android.navigation.databinding.FragmentTitleBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -43,7 +42,20 @@ class TitleFragment : Fragment() {
         binding.playButton.setOnClickListener{view:View ->
             view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
         }
+        setHasOptionsMenu(true)  //allow option menu to the activity
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu,menu)
+        //add option_menu resource
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        //the action is to navigate to the Fragment that has the same id as the selected menu item.
+        //the id of item menu (@+id/aboutFragment)in options_menu and the AboutFragment added in navigation.xml has the same id
+        return NavigationUI.onNavDestinationSelected(item,requireView().findNavController())||super.onOptionsItemSelected(item)
     }
 
     companion object {
